@@ -1,4 +1,52 @@
 .hero {
   overflow: hidden;
   position: relative;
+  background: url(https://localhost:3000/wp-content/uploads/2018/06/www.knobcreek.com-1293609732325191.jpg);
+  color: var(--white);
+  display: grid;
+  align-items: start;
+  grid-template-columns: 55% 45%;
+  grid-template-rows: max-content min-content;
+  padding-top: 25px;
+
+  @media (--md) {
+    padding: 0 9rem;
+  }
+  /* & .container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+  } */
+
+  &__headline{
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+    align-self: start;
+    padding-top: 150px;
+  }
+  &__description{
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+    align-self: start;
+    padding-top: 25px;
+  }
+  &__fg-image{
+    grid-column: 2 / 2;
+    grid-row: 1 / span 2;
+    justify-self: center;
+    align-self: end;
+    padding-top: 75px;
+    width: 80%;
+    & .image__img{
+      width: 100%;
+    }
+  }
+
+  &__content{
+    /* position: absolute; */
+    
+  }
 }

@@ -1,4 +1,3 @@
-<section class="hero" data-module="hero">
 <?php
     global $post;
     $post = get_post($postID);
@@ -27,16 +26,15 @@
     $headline = get_field( "index__headline");
     $content = get_the_content();
 ?>
+<section class="hero container" data-module="hero" --bg-url="https://localhost:3000/wp-content/uploads/2018/06/www.knobcreek.com-1293609732325191.jpg">
 
-<?php echo $bg_image; ?>
+ <!-- <div class="hero__bg-image"><?php echo $bg_image; ?></div> -->
+  <!-- <div class="container"> -->
 
-  <main>
-
-    <h1><?php echo $headline ?></h1>
-    <p><?php echo $content ?></p>
-    <?php echo $fg_image; ?>
-
+    <h1 class="hero__headline"><?php echo $headline ?></h1>
+    <p class="hero__description"><?php echo $content ?></p>
+    <div class="hero__fg-image"><?php echo $fg_image; ?></div>
     
-  </main>
+  <!-- </div> -->
   <?php wp_reset_postdata(); ?>
 </section>
