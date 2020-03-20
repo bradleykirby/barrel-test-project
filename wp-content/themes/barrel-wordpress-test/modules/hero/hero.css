@@ -2,44 +2,74 @@
   overflow: hidden;
   position: relative;
   background: url(https://localhost:3000/wp-content/uploads/2018/06/www.knobcreek.com-1293609732325191.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
   color: var(--white);
-  display: grid;
-  align-items: start;
-  grid-template-columns: 55% 45%;
-  grid-template-rows: max-content min-content;
-  padding-top: 25px;
 
-  @media (--md) {
-    padding: 0 9rem;
-  }
-  /* & .container{
-    position: absolute;
-    top: 0;
-    left: 0;
+  & .container{
+    @media (--xl) {
+      width: 75%;
+    }
+
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto;
-  } */
+    justify-items: center;
+    grid-template-columns: 100%;
+
+    grid-template-rows: max-content max-content max-content;
+
+    
+
+    @media (--ms){
+      grid-template-rows: max-content min-content;
+      grid-template-columns: 60% 40%;
+
+    }
+    margin: 0 auto;
+  }
 
   &__headline{
     grid-column: 1 / 1;
     grid-row: 1 / 2;
     align-self: start;
-    padding-top: 150px;
+    justify-self: start;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    @media (--ms){
+      text-align: left;
+      width: auto;
+    }
+    padding: 100px 1.5rem 0;
+
   }
   &__description{
     grid-column: 1 / 1;
     grid-row: 2 / 2;
     align-self: start;
+    justify-self: start;
     padding-top: 25px;
+    padding: 25px 1.7rem 0;
+    text-align: center;
+    width: 90%;
+    @media (--ms){
+      width: auto;
+      text-align: left;
+    }
   }
   &__fg-image{
-    grid-column: 2 / 2;
-    grid-row: 1 / span 2;
+    grid-column: 1 / 1;
+    grid-row: 3 /3;
+    width: 40%;
+    padding-top: 25px;
+    @media (--ms){
+      grid-column: 2 / 2;
+      grid-row: 1 / span 2;
+      width: 67%;
+      padding-top: 75px;
+    }
+
     justify-self: center;
     align-self: end;
-    padding-top: 75px;
-    width: 80%;
     & .image__img{
       width: 100%;
     }
