@@ -1,0 +1,6 @@
+.two-up{
+    & i{
+        color: var(--red);
+    }
+}
+
