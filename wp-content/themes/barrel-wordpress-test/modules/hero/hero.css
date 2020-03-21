@@ -1,11 +1,12 @@
 .hero {
   overflow: hidden;
   position: relative;
-  background-position: center top;
-  background-repeat: no-repeat;
   color: var(--white);
+  background-color: var(--gold);
 
   & .container{
+    background-repeat: no-repeat;
+
     @media (--xl) {
       width: 75%;
     }
