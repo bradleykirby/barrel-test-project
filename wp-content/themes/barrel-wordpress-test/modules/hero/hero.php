@@ -16,7 +16,6 @@
       'top' => false,
       'size' => 'medium',
       'alt' => get_post_meta($fg_image_id, '_wp_attachment_image_alt', TRUE)
-
     ));
 
     $headline = get_field( "index__headline");

@@ -17,15 +17,7 @@
     $type_icon = get_format_icon(get_post_format());
     $date = get_the_date('F d');
     $title = get_the_title();
-    
-    add_filter('excerpt_length', function($length){
-        return 37;
-    });
-    add_filter('excerpt_more', function($more) {
-        return '...';
-    });
     $excerpt = get_the_excerpt();
-
     $link = '<a class="two-up__card--link"href=' . get_the_permalink() . '>' . get_cta(get_post_format()) . '</a>';
 ?>
 <section class="two-up container">
