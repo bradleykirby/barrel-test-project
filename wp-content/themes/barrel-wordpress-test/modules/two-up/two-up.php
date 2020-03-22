@@ -14,6 +14,7 @@
       'alt' => get_post_meta($image_id, '_wp_attachment_image_alt', TRUE)
     ));
 
+    $type_icon = get_format_icon(get_post_format());
     $date = get_the_date('F d');
     $title = get_the_title();
     
@@ -25,18 +26,19 @@
     });
     $excerpt = get_the_excerpt();
 
-    $link = '<a href=' . get_the_permalink() . '>' . get_cta(get_post_format()) . '</a>';
-    $type_icon = get_format_icon(get_post_format());
+    $link = '<a class="two-up__card--link"href=' . get_the_permalink() . '>' . get_cta(get_post_format()) . '</a>';
 ?>
-<section class="two-up">
-    <?php echo $image ?>
-    <?php echo $type_icon ?>
-    <?php echo $date ?>
-    <h3><?php echo $title ?>
-    <p><?php echo $excerpt ?></p>
-    <a href="<?php the_permalink(); ?>" class="post__meta--cta post--link">
-      <?php echo $post__cta; ?>
-    </a>
-    <?php echo $link ?>
+<section class="two-up container">
+    <div class="two-up__image"><?php echo $image ?></div>
+    <div class="two-up__card">
+      <span class="two-up__card--icon"><?php echo $type_icon ?></span>
+      <time class="two-up__card--date" ><?php echo $date ?></time>
+      <h3 class="two-up__card--title"><?php echo $title ?></h3>
+      <p class="two-up__card--excerpt"><?php echo $excerpt ?></p>
+      <a href="<?php the_permalink(); ?>" class="post__meta--cta post--link">
+        <?php echo $post__cta; ?>
+      </a>
+      <?php echo $link ?>
+    </div>
     <?php wp_reset_postdata(); ?>
 </section>
