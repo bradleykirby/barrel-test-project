@@ -1,6 +1,7 @@
 .layout {
   display: flex;
   flex-direction: column;
+  background-color: var(--white);
 
   @media (--sm) {
     flex-direction: row;

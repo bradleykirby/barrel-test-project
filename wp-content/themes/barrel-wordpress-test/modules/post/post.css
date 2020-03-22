@@ -4,6 +4,20 @@
   padding: 0.9rem 0;
   width: 100%;
 
+  &:hover{
+    .post__meta--icon{
+      background-color: var(--color-primary) !important;
+    }
+    .post__meta--date button{
+      color: var(--white) !important;
+    }
+    .post__meta{
+      background-color: var(--color-primary) !important;
+      color: var(--white) !important;
+    }
+  }
+  
+
   @media (--sm) {
     width: 50%;
   }
@@ -114,7 +128,8 @@
       color: var(--red);
 
       &:hover {
-        color: --blackish;
+        color: var(--red--dark);
+        text-decoration: underline;
       }
     }
 
