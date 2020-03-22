@@ -13,11 +13,6 @@ add_filter('the_content', function( $content ){
   return $content;
 });
 
-add_filter('excerpt_length', function($length){
-  return 37;
-});
-add_filter('excerpt_more', function($more) {
-  return '...';
-});
+
 
 

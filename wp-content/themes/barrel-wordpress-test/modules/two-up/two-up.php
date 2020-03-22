@@ -17,7 +17,7 @@
     $type_icon = get_format_icon(get_post_format());
     $date = get_the_date('F d');
     $title = get_the_title();
-    $excerpt = get_the_excerpt();
+    $excerpt = the_truncated_excerpt(get_the_excerpt(), 36);
     $link = '<a class="two-up__card--link"href=' . get_the_permalink() . '>' . get_cta(get_post_format()) . '</a>';
 ?>
 <section class="two-up container">
