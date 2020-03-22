@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <?php
-    $front_page_id = get_option( 'page_on_front' ) !== 0 ? get_option( 'page_on_front' ) : 2;
+    $front_page_id = get_option( 'page_on_front' );
     $most_recent_post_id = get_most_recent_post_ID();
 ?>
 

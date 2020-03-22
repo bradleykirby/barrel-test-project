@@ -12,3 +12,5 @@ require_once( __DIR__ . '/lib/helpers/scripts.php' );
 require_once( __DIR__ . '/lib/helpers/media.php' );
 require_once( __DIR__ . '/lib/helpers/icons.php' );
 require_once( __DIR__ . '/lib/helpers/acf.php' );
+require_once( __DIR__ . '/lib/helpers/misc.php' );
+
