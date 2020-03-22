@@ -4,7 +4,7 @@
     setup_postdata( $post );
 
     $bg_image_id = get_post_thumbnail_id( get_the_ID() );
-    $bg_image = wp_get_attachment_image_src($bg_image_id, 'large')[0];
+    $bg_image = wp_get_attachment_image_src($bg_image_id, 'full')[0];
     $bg_image_position = image_custom_position($post);
 
     $fg_image_id = get_field('index__product')['ID'];
